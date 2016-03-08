@@ -1,0 +1,20 @@
+Proceso comprassupermercado
+	Definir a,b,c,d,e Como Entero
+	Escribir " ingrese la cantidad del primer producto"
+	leer a
+	Escribir "ingrese la cantidad del segundo producto"
+	leer b
+	Escribir "ingrese la cantidad del terce producto"
+	leer c
+	Escribir "ingrese la cantidad del cuarto producto"
+	leer d
+	Escribir "ingrese la cantidad del quinto  producto"
+	Leer e
+	suma=a+b+c+d+e
+	Escribir suma
+	
+	
+
+	
+	
+FinProceso
