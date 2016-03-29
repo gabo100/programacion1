@@ -1,0 +1,58 @@
+//Menu de Comida
+
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define ham 3
+#define hamq 5
+#define papa 2
+#define soda 2.5
+using namespace std;
+
+void main()
+{
+   int  opcion,s,r,t;
+   s = 0;
+   do {
+     cout << endl;
+     cout << "1.- Hamburguesa (3bs)" << endl;
+     cout << "2.- Hamburguesa con Queso (5bs)" << endl;
+     cout << "3.- Papas Fritas (2bs)" <<endl;
+     cout << "4.- Soda (2.5bs)" <<endl;
+	 cout << "0.- Salir" << endl;
+     cout << "Elige una opcion: " ;
+     cin >> opcion;
+     switch (opcion) {
+		case 1: cout << "Ingrese la Cantidad: ";
+				cin >>t; 
+				r = ham * t;
+				cout << "El costo Parcial es: " << r <<endl;
+				s = s + r;
+				break;
+	    case 2: cout << "Ingrese la Cantidad: ";
+				cin >>t; 
+				r = hamq * t;
+				cout << "El costo Parcial es: " << r <<endl;
+				s = s + r;
+				break;
+	    case 3: cout << "Ingrese la Cantidad: ";
+				cin >>t; 
+				r = papa * t;
+				cout << "El costo Parcial es: " << r <<endl;
+				s = s + r;
+				break;
+	    case 4: cout << "Ingrese la Cantidad: ";
+				cin >>t; 
+				r = soda * t;
+				cout << "El costo Parcial es: " << r <<endl;
+				s = s + r;
+				break;
+		case 0: cout << "Salir" << endl;break;
+	    default: cout << "Opcion invalida" << endl;
+		}
+	 } while (opcion != 0);
+		cout << "El Costo Total es " << s << endl;
+     getch();
+}
