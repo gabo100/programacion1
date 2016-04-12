@@ -1,0 +1,28 @@
+// factorial y validacion.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	int factorial,i,n;
+	factorial=1;
+	do
+	{
+		cout<<"ingrese ele valor de n:";
+		cin>>n;
+	}
+	while (n<0);// la condicion debe contemplar los valores
+				//negar la condicion correcta
+	i=2;
+	while (i<=n)
+	{
+		factorial=factorial*i;
+		i++;
+	}	
+		cout<<"el factoria de"<<n<<"es"<<factorial;
+getch();
+
+}
