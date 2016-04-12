@@ -1,0 +1,33 @@
+// fatorial.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+void main()
+{
+	float  a;
+	int factorial,i,n,a, j, b;
+	factorial=1;
+	do
+	{
+		cout<<"ingrese ele valor de n:";
+		cin>>n;
+		cout<<"ingrese el valor de a";
+		cin>>a;
+	}
+	while (a<0) (n<0);// la condicion debe contemplar los valores
+				//negar la condicion correcta
+	for(j=1;j<=n;j++)
+	{	
+		
+		b=b+(pow(a,i)/(factorial*j));
+		factorial=factorial*j;
+	}		
+	cout<<"el factoria de"<<n<<"es"<<factorial;
+	cout<<"el resultado es"<<b<<endl;
+getch();
+
+}
