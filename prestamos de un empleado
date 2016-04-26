@@ -1,0 +1,36 @@
+// prestamos de un empleado.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+using namespace std;
+void main()
+{
+	int totalp=0,cod, aux, montoe=0,cp;
+	float np;
+	string nombre;
+	cout<<"ingrese codigo:";
+	cin>>cod;
+	while (cod!=-999) 
+	{	aux=cod;
+		montoe=0;
+		while (aux==cod)
+		{	cout<<"ingrese nombre:";
+			cin>>nombre;
+			cout<<"ingrese numero de prestamo:";
+			cin>>np;
+			cout<<"ingrese la cantidad del prestamo:";
+			cin>>cp;
+			montoe=montoe+cp;
+			cout<<"ingrese codigo:";
+			cin>>cod;
+		}
+		cout<<"empleado:"<<aux<<"monto prestado:"<<montoe;
+		totalp=totalp+montoe;
+	}
+	cout<<"total prestado es:"<<totalp;
+	getch();
+}
+
