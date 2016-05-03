@@ -1,0 +1,25 @@
+// total ganado.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+float total(float a, float b);
+void main ()
+{ float z;
+	int horas, costo;
+	cout<<"ingrese hora:";
+	cin>> horas;
+	cout<<"ingrese costo:";
+	cin>> costo;
+	z=total(horas,costo);
+	cout<<"el total ganado es:"<<z;
+	getch();
+	return ;
+}
+float  total(float a,float b)
+{	float g;
+	g=a*b;
+	return g;
+}
