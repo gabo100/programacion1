@@ -1,0 +1,90 @@
+// menu funciones.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <stdlib.h>
+#include "windows.h"
+using namespace std;
+
+float area_cuadrado (float l);
+void cal_potencia (float x, int c, float &z);
+int mcd (int j, int k);
+
+void main ()
+{
+	
+	int opcion,l,e,y;
+	float z,b,r,h,j;
+	system ("color 9A");
+	do
+	{
+	cout<<"Bienvenido al programa:"<<endl;
+	cout<<"------Menu------:"<<endl;
+	cout<<" 1 area de un cuadrado:"<<endl;
+	cout<<" 2 calcular la potencia:"<<endl;
+	cout<<"3 calcular mcd de dos numeros:"<<endl;
+	cout<<" digite 0 para salir:"<<endl;
+	cout<<" ingrese opcion:"<<endl;
+	cin>> opcion;
+		switch(opcion)
+		{	case 1: cout<<"ingrese lado:";
+					cin>>l;
+					z=area_cuadrado(l);
+					cout<<"el area es:"<<z;
+					break;
+		case 2: cout<<"ingrese base:";
+				cin>> b;
+				cout<<"ingrese exponente:";
+				cin>>e;
+				cal_potencia(b,e,r);
+				cout<<"el resultado es:"<<r;
+				break;
+
+		case 3:	cout<<"ingrese un numero:";
+				cin>>h;
+				cout<<"ingrese un numero:";
+				cin>>j;
+				y=mcd(h,j);
+				cout<<"el mcd es:"<<y;
+				break;
+
+		case 0:	cout<<"se termino el programa *-*:";
+				break;
+
+		default: cout<<"opcion invalida:";
+		}
+	system ("cls");
+	} while (opcion!=0);
+	getch();
+	
+	
+}
+
+float area_cuadrado (float l)
+{
+	float g;
+		g= l*l;
+	return g;
+}
+
+void cal_potencia (float x, int c, float &z)
+{	z=1;
+	for (int i=1;i<=c; i++)
+	{
+		z=z*x;
+	}
+}
+
+int mcd (int j, int k)
+{	int c;
+	while (j!=k)
+	{	if (j>k)
+		j=j-k;
+	else
+		 k=k-j;
+	}
+	c=j;
+	return c;
+}
