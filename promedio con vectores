@@ -1,0 +1,54 @@
+// promediio.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+using namespace std;
+void cargar (double a[], int tam);
+void mostrar ( double a [], int tam);
+double promedio( double a[], int tam);
+
+void main()
+{
+	int n;
+	double notas[MAX], prom;
+	do 
+	{
+		cout<<" ingrese el numero de elementos:";
+		cin>>n;
+	}while ((n<=0)||(n>100));
+	cargar (notas,n);
+	mostrar(notas,n);
+	prom= promedio(notas,n);
+	cout<<"el promedio es:"<<prom;
+	getch();
+}
+
+void cargar(double a[], int tam)
+{
+	for (int i=0; i<tam; i++)
+	{
+		cout<<"V["<<i<<"]=";
+		cin>>a[i];
+
+	}
+}
+
+void mostrar(double a[], int tam)
+{ for (int i=0; i<tam ;i++)
+
+	cout<<"V["<<i<<"]="<<a[i]<<endl;
+}
+
+double promedio( double a[], int tam)
+{	double p=0;
+	for(int i=0;i<tam;i++)
+	{
+		p=p+a[i];
+	}
+
+	return p/tam;
+}
+
