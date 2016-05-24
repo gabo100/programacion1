@@ -1,0 +1,85 @@
+// Sumar2vec.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define max 100
+using namespace std;
+
+void cargar (double a[], int tam);
+void mostrar(double a[], int tam);
+void revert (double a[], int tam);
+
+
+void main()
+{
+	int n,opcion;
+	double lugares[max];
+	cout<<"Bienvenido al promagra:"<<endl;
+	cout<<"Digite 1 para cargar arreglo:"<<endl;
+	cout<<"Digite 2 para mostrar arreglo:"<<endl;
+	cout<<"Digite 3 para invertir arreglo:"<<endl;
+	cout<<"Digite 0 para salir:"<<endl;
+	cin>>opcion;
+	do{
+		switch (opcion){
+		case 1:		do{
+					cout<<"ingrese el numero de elementos:"<<endl;
+					cin>>n;
+					}while((n<=0)|| (n>max));
+					cargar(lugares,n);
+					break;
+		case 2:		do{
+					cout<<"ingrese el numero de elementos:"<<endl;
+					cin>>n;
+					}while((n<=0)|| (n>max));
+					mostrar(lugares,n);
+					break;
+		case 3:		do{
+					cout<<"ingrese el numero de elementos:"<<endl;
+					cin>>n;
+					}while((n<=0)|| (n>max));
+					cargar(lugares,n);
+					revert(lugares,n);
+					break;
+		case 0:		cout<<"Se termino el programa:"<<endl;
+					break;
+		default:	cout<<"opcion invalida:";
+		}
+		cout<<"ingrese otra opcion:"<<endl;
+		cin>>opcion;
+
+		}while (opcion!=0);
+	
+	getch();
+
+}
+
+
+
+void cargar(double a[], int tam)
+{	int i;
+	for (i=0;i<tam;i++)
+		{ cout<<"V["<<i<<"]";
+		 cin>>a[i];
+	}
+}
+
+
+void mostrar(double a[],int tam)
+{	int i;
+	for (i=0; i<tam; i++)
+		{cout<<"V["<<i<<"]"<<a[i]<<endl;
+	}
+}
+
+void revert(double a[], int tam)
+{	int i,aux;
+	for(i=0; i<tam/2; i++)
+	{ aux=a[i];
+	a[i]=a[tam-i-1];
+	a[tam-i-1]=aux;
+	}
+}
+
