@@ -1,0 +1,53 @@
+// k.cpp : Defines the entry point for the console application.
+ 
+// Elaborar un programa que lee un numero natural A (a>0) y cargue un
+//   vector VEC [N] con los N multiplos de A.
+ 
+ 
+#include "stdafx.h"
+#include <iostream>
+#define MAX 100
+using namespace std;
+ 
+void cargar(int a[], int tam, int A);
+void mostrar(int a[], int tam);
+ 
+void main()
+{
+	int vec[MAX];
+	int N, A;
+ 
+	// Natural A del cual vamos a calcular los multiplos
+	do {
+		cout << "Introduzca un numero natural: ";
+		cin >> A;
+		if (A <= 0) {
+			cout << "DEBE introducir un numero natural.\n";
+		}
+	} while (A <= 0);
+ 
+	// Cantidad de elementos del vector
+	do {
+		cout << "Cuantos multiplos? ";
+		cin >> N;
+	} while (N < 0 || N > MAX);
+ 
+	// Rellenar con multiplos
+	cargar(vec, N, A);
+ 
+	// Mostrar el vector rellenado
+	mostrar(vec, N);
+}
+ 
+void cargar(int a[], int tam, int A) {
+	for (int i = 0; i < tam; i++) {
+		a[i] = A * (i + 1);	
+	}
+}
+ 
+void mostrar(int a[], int tam) {
+	for (int i = 0; i < tam; i++) {
+		cout << a[i] << " ";
+	}
+	cout << '\n';
+}
