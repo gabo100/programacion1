@@ -30,17 +30,9 @@ void main()
 					}while((n<=0)|| (n>max));
 					cargar(lugares,n);
 					break;
-		case 2:		do{
-					cout<<"ingrese el numero de elementos:"<<endl;
-					cin>>n;
-					}while((n<=0)|| (n>max));
-					mostrar(lugares,n);
+		case 2:			mostrar(lugares,n);
 					break;
-		case 3:		do{
-					cout<<"ingrese el numero de elementos:"<<endl;
-					cin>>n;
-					}while((n<=0)|| (n>max));
-					cargar(lugares,n);
+		case 3:			cargar(lugares,n);
 					revert(lugares,n);
 					break;
 		case 0:		cout<<"Se termino el programa:"<<endl;
@@ -78,8 +70,8 @@ void revert(double a[], int tam)
 {	int i,aux;
 	for(i=0; i<tam/2; i++)
 	{ aux=a[i];
-	a[i]=a[tam-i-1];
-	a[tam-i-1]=aux;
+	a[i]=a[tam-1-i];
+	a[tam-1-i]=aux;
 	}
 }
 
