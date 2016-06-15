@@ -1,0 +1,48 @@
+// positivo,negativos.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+const int MAX= 1000;
+using namespace std;
+void calcular ( float v[], float n , float &positvo, float &negativo, float &cero);
+
+void main()
+{
+	float n,positivo, negativo, cero;
+	float v[MAX];
+	cin>>n;
+	for (int i=0 ; i<n; i++)
+	{
+		cin>>v[i];
+	}
+
+	calcular(v,n,positivo, negativo, cero);
+	cout<<"los positivos son:"<<positivo<<endl;
+	cout<<"los negativos son:"<<negativo<<endl;
+	cout<<"los ceros son:"<<cero<<endl;
+	getch();
+
+}
+
+
+void calcular ( float v[], float n , float &positivo, float &negativo, float &cero)
+{	positivo=0,negativo=0, cero=0;
+	for( int i=0; i<n; i++)
+	{
+		if( v[i]>0)
+		{	positivo++;
+		}
+		if(v[i]<0)
+		{
+			negativo++;
+		}
+		
+		if(v[i]==0)
+		{
+			cero++;
+		}
+	}
+}
+
